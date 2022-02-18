@@ -25,7 +25,7 @@
 ```
 $ sudo apt install python3-pip
 $ pip3 install line-bot-sdk
-$ pip3 install netifaces  #抓IP位址用
+$ pip3 install netifaces  `抓IP位址用
 ```
 
 撰寫PYTHON執行檔
