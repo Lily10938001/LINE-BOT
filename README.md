@@ -81,7 +81,7 @@ line_bot_api.broadcast(LocationSendMessage(
 ```
 
 ```
-$ $python3 main.py
+$ python3 main.py
 ```
 
 查看LINE即可看到結果
