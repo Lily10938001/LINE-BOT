@@ -12,7 +12,9 @@
 網站: https://developers.line.biz/en/
 
 新增一個 provider (服務機構，例如：XX 公司) 
+
 → Messaging API channel　
+
 → 掃描QR code可加入好友
 
 # 架設LINUX環境 - Ubuntu-18.04.6-live-server-amd64
