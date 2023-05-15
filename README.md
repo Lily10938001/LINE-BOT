@@ -28,50 +28,32 @@ $ pip3 install line-bot-sdk
 $ pip3 install netifaces  #抓IP位址用
 ```
 
-撰寫PYTHON執行檔
-```
-$ vi main.py
-```
-
 ## PYTHON執行檔
-匯入相關套件
 ```
+# 匯入相關套件
 import netifaces as ni
 from datetime import datetime as T
 from linebot import LineBotApi
 from linebot.models import TextSendMessage,LocationSendMessage
-```
 
-編輯回報IP位址程式碼
-```
+# 編輯回報IP位址程式碼
 etho = ni.interfaces()
 ni.ifaddresses(etho[1])
 ip = ni.ifaddresses(etho[1])[ni.AF_INET][0]['addr']
-```
 
-日誌系統
-```
+# 日誌系統
 T = T.now().strftime("%Y-%m-%d %H:%M:%S")
 message1 = (T,"program started.")
 message2 = (T,"get IP address:",ip)
 print (message1)
 print (message2)
-```
 
-TOKEN可在頻道中的"Messaging API"找到
-```
-CHANNEL_ACCESS_TOKEN = "/0dt+zXYalefZNVlmnJ11RbSUydOfPupYzQI/xtHNP//TiMdWsxznPqjz4TQxzMBH+gQ80g6gSOwkSYLY9HrB2ozdGoC+GjTBYre135NdXhxv9/pyczLlFUTaFhiSJrW3jyCr7K3pdDREl+DlftVYAdB04t89/1O/w1cDnyilFU="
-```
-
-設定Broadcast的訊息內容:時間+IP位址
-```
-line_bot_api = LineBotApi(CHANNEL_ACCESS_TOKEN)
+# 設定Broadcast的訊息內容:時間+IP位址
+line_bot_api = LineBotApi(CHANNEL_ACCESS_TOKEN)  # TOKEN可在頻道中的"Messaging API"找到
 line_bot_api.broadcast(TextSendMessage(text = str(message1)))
 line_bot_api.broadcast(TextSendMessage(text = str(message2)))
-```
 
-設定Broadcast的訊息內容:文字及地址
-```
+# 設定Broadcast的訊息內容:文字及地址
 line_bot_api.broadcast(TextSendMessage(text = "歡迎來到肉肉團購網!"))
 line_bot_api.broadcast(LocationSendMessage(
     title = "肉肉團購總部",
@@ -80,8 +62,8 @@ line_bot_api.broadcast(LocationSendMessage(
     longitude = "121.53809221221155"))
 ```
 
+# 執行
 ```
 $ python3 main.py
 ```
-
 查看LINE即可看到結果
