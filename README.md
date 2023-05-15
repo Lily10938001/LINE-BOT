@@ -17,10 +17,8 @@
 
 → 掃描QR code可加入好友
 
-## 架設LINUX環境 - Ubuntu-18.04.6-live-server-amd64
-
 ## 程式碼部分
-### LINUX
+### LINUX - Ubuntu-18.04.6-live-server-amd64
 安裝LINE BOT及相關套件
 ```
 $ sudo apt install python3-pip
