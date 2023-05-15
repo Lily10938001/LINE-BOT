@@ -8,7 +8,7 @@
 3.推播地址
 
 -----------------------------------------------------------------------
-# LINE BOT 申請
+## LINE BOT 申請
 網站: https://developers.line.biz/en/
 
 新增一個 provider (服務機構，例如：XX 公司) 
@@ -17,10 +17,10 @@
 
 → 掃描QR code可加入好友
 
-# 架設LINUX環境 - Ubuntu-18.04.6-live-server-amd64
+## 架設LINUX環境 - Ubuntu-18.04.6-live-server-amd64
 
-# 程式碼部分
-## LINUX
+## 程式碼部分
+### LINUX
 安裝LINE BOT及相關套件
 ```
 $ sudo apt install python3-pip
@@ -28,7 +28,7 @@ $ pip3 install line-bot-sdk
 $ pip3 install netifaces  #抓IP位址用
 ```
 
-## PYTHON執行檔
+### PYTHON執行檔
 ```
 # 匯入相關套件
 import netifaces as ni
@@ -62,7 +62,7 @@ line_bot_api.broadcast(LocationSendMessage(
     longitude = "121.53809221221155"))
 ```
 
-# 執行
+## 執行
 ```
 $ python3 main.py
 ```
